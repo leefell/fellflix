@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+# Fellflix
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descrição do Projeto
+Fellflix é uma aplicação web que consome a API pública [The Movie Database (TMDb)](https://www.themoviedb.org/), permitindo aos usuários:
 
-## Available Scripts
+- Visualizar os 10 principais filmes em cartaz na página inicial.
+- Acessar detalhes de filmes específicos, incluindo imagem, descrição, nome e opções para salvar nos favoritos ou assistir ao trailer no YouTube.
+- Gerenciar uma lista de favoritos salva no **LocalStorage** do navegador.
+- Navegar para páginas de erro ao acessar URLs inválidas.
 
-In the project directory, you can run:
+É uma aplicação simples, desenvolvida com o objetivo de aprender e praticar conceitos de React, como `useState` e `useEffect`, além de integrar APIs públicas.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tecnologias Utilizadas
+- **React** (v19.0.0)
+- **React Router DOM** (v7.1.1)
+- **Axios** (v1.7.9)
+- **React Toastify** (v11.0.2)
+- **gh-pages** (para deploy)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Objetivo do Projeto
+Estudar como consumir APIs públicas utilizando React, além de aprofundar os conhecimentos em hooks como `useState` e `useEffect`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Como Executar o Projeto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Pré-requisitos
+- Node.js instalado na máquina.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Passos para execução
+1. Clone este repositório.
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm start
+   ```
+4. Acesse a aplicação no navegador através do endereço:
+   [http://localhost:3000](http://localhost:3000).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Deploy
+O projeto está hospedado no GitHub Pages e pode ser acessado pelo link:
+[Fellflix - GitHub Pages](https://leefell.github.io/fellflix).
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Estrutura do Projeto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```plaintext
+Fellflix/
+├── public/
+│   ├── index.html
+│   ├── robots.txt
+├── src/
+│   ├── components/
+│   │   ├── Header/
+│   │   │   ├── header.css
+│   │   │   ├── index.js
+│   ├── pages/
+│   │   ├── Err/
+│   │   ├── Favoritos/
+│   │   ├── Filme/
+│   │   ├── Home/
+│   ├── services/
+│   │   ├── api.js
+│   ├── App.js
+│   ├── index.css
+│   ├── index.js
+│   ├── routes.js
+├── .env
+├── .gitignore
+├── LICENSE
+├── package-lock.json
+├── package.json
+├── README.md
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Descrição dos Diretórios e Arquivos
+- **public/**: Contém arquivos estáticos e o HTML base do projeto.
+- **src/**: Contém todo o código-fonte.
+  - **components/**: Componentes reutilizáveis, como o cabeçalho (Header).
+  - **pages/**: Contém as páginas da aplicação, como Home, Favoritos, Filme e Err (página de erro).
+  - **services/**: Gerencia chamadas à API externa usando Axios.
+  - **App.js**: Componente principal da aplicação.
+  - **routes.js**: Define as rotas da aplicação.
+- **.env**: Variáveis de ambiente (se necessário).
+- **package.json**: Gerencia dependências e scripts do projeto.
+- **README.md**: Documentação inicial do projeto.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Funcionalidades Principais
+1. **Home**:
+   - Exibe os 10 principais filmes em cartaz.
+2. **Página de Filme**:
+   - Exibe detalhes do filme, como imagem, descrição e nome.
+   - Botões para salvar como favorito e assistir ao trailer (redireciona para o YouTube com uma pesquisa do tipo "[Nome do Filme] trailer").
+3. **Favoritos**:
+   - Exibe a lista de filmes favoritados, permitindo ver detalhes ou removê-los.
+4. **Página de Erro**:
+   - Exibida para URLs inválidas.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Autor
+**Alexandre Augusto dos Santos Feltrin**
 
-### Code Splitting
+- Este projeto foi inspirado em um curso online, adaptado e personalizado para estudos e práticas de desenvolvimento web.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Observação
+Fellflix é um projeto com fins apenas educacionais e utiliza a API pública do TMDb. Os direitos sobre os dados dos filmes pertencem à [The Movie Database](https://www.themoviedb.org/).
