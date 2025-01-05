@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fellflix/static/css/main.a1ff5fd7.css",
+    "main.js": "/fellflix/static/js/main.74744d97.js",
+    "index.html": "/fellflix/index.html",
+    "main.a1ff5fd7.css.map": "/fellflix/static/css/main.a1ff5fd7.css.map",
+    "main.74744d97.js.map": "/fellflix/static/js/main.74744d97.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a1ff5fd7.css",
+    "static/js/main.74744d97.js"
+  ]
+}
